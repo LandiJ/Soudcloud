@@ -1,3 +1,12 @@
 body {
   background-color: #60d9f1;
 }
+
+.results {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.result-box {
+  flex: 1 25%;
+}
