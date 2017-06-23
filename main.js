@@ -1,8 +1,3 @@
-/*
-  Here is a guide for the steps you could take:
-*/
-
-// 1. First select and store the elements you'll be working with
 var audioPlayer = document.querySelector("audio");
 
 var searchForm = document.querySelector(".search-form");
@@ -14,13 +9,12 @@ var resultsContainer = document.querySelector(".results");
 var submit = document.createElement("input");
 searchForm.appendChild(submit);
 submit.setAttribute("type", "submit");
-// 2. Create your `onSubmit` event for getting the user's search term
+submit.setAttribute("class", "submit");
+
 searchForm.addEventListener("submit", function(evt) {
   evt.preventDefault();
+  resultsContainer.innerHTML = "";
 
-  // console.log(input.value);
-
-  // 3. Create your `fetch` request that is called after a submission
   const API_KEY = "?client_id=095fe1dcd09eb3d0e1d3d89c76f5618f";
   const URL_1 = "https://api.soundcloud.com/users/";
   var username = input.value.replace(/\s+/g, "-").toLowerCase();
@@ -72,6 +66,7 @@ searchForm.addEventListener("submit", function(evt) {
             resultBox.appendChild(name);
             resultsContainer.appendChild(resultBox);
             titleSource = data[i].stream_url;
+            input.value = "";
           }
 
           for (var i = 0; i < each_track.length; i++) {
@@ -79,18 +74,8 @@ searchForm.addEventListener("submit", function(evt) {
               title.container = titleSource + API_KEY;
               console.log(event.target.id);
               audioPlayer.setAttribute("src", event.target.id + API_KEY);
-
-              // console.log(data[i].stream_url);
-
-              // console.log(titleSource);
             });
           }
         });
     });
 });
-
-//   username = "";
-
-// 4. Create a way to append the fetch results to your page
-
-// 5. Create a way to listen for a click that will play the song in the audio play
