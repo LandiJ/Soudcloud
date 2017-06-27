@@ -11,29 +11,6 @@ header {
   color: white;
 }
 
-.results {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.each_track {
-  text-decoration: underline white;
-  color: white;
-  font-weight: bold;
-  text-shadow: 7px 4px black;
-  cursor: pointer;
-  font-size: 30px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  line-height: 30px;
-}
-
-.result-box {
-  flex: 1;
-  text-align: center;
-  color: white;
-  font-size: 20px;
-}
-
 form {
   text-align: center;
   margin-bottom: 3rem;
@@ -55,6 +32,29 @@ img {
   height: 15rem;
   width: 15rem;
   box-shadow: 5px 5px 5px 0px black;
+}
+
+.results {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.each_track {
+  text-decoration: underline white;
+  color: white;
+  font-weight: bold;
+  text-shadow: 7px 4px black;
+  cursor: pointer;
+  font-size: 30px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  line-height: 30px;
+}
+
+.result-box {
+  flex: 1;
+  text-align: center;
+  color: white;
+  font-size: 20px;
 }
 
 .player {
