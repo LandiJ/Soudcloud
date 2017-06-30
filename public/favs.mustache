@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="mustache.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Faves Page</h1>
+
+    <section class="player">
+        <audio class="music-player" controls autoplay {{#song}} src="{{stream_url}}" {{/song}}></audio>
+    </section>
+
+    <div class="pageStyle">
+
+        {{#artwork}}
+        <div>
+
+            <p><img src="{{artwork_url}}" alt=""></p>
+            <p>{{artist}}</p>
+            <form action="/playFav" method="post">
+                <input type="hidden" name="something" value={{id}}>
+                <input type="submit" name="song" value="{{description}}">
+            </form>
+
+        </div>
+        {{/artwork}}
+
+
+    </div>
+
+
+
+</body>
+
+</html>
